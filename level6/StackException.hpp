@@ -33,6 +33,13 @@ class StackEmptyException : public StackException { //StackEmpty derived class
         }
 };
 
+class SizeMismatchException : public StackException { //SizeMismatch derived class
+    public:
+        std::string GetMessage() const override {
+            return "Size mismatch in stack. Operation requires matching sizes.";
+        }
+};
+
 } //Namespace Containers
 } //Namespace AidanRicher
 
